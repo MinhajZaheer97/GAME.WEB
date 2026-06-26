@@ -208,12 +208,11 @@
 const boxes = [...document.querySelectorAll(".box")];
 const resetBtn = document.querySelector(".reset");
 const winnerText = document.querySelector(".winner");
-const aiBtn = document.querySelector(".AI");
 
-const drawSound = new Audio("./sounds/tic-tac-toe/draw.wav");
-const clickSound = new Audio("./sounds/tic-tac-toe/click.wav");
-const winSound = new Audio("./sounds/tic-tac-toe/winner.wav");
-const ok = new Audio("./sounds/tic-tac-toe/ok.mp3");
+const drawSound = new Audio("../../../assets/sounds/tic-tac-toe/draw.wav");
+const clickSound = new Audio("../../../assets/sounds/tic-tac-toe/click.wav");
+const winSound = new Audio("../../../assets/sounds/tic-tac-toe/winner.wav");
+const ok = new Audio("../../../assets/sounds/tic-tac-toe/ok.mp3");
 
 let turnO = true;
 boxes.forEach((box) => {
@@ -222,17 +221,18 @@ boxes.forEach((box) => {
     box.classList.add("shake");
     if (turnO) {
       box.innerText = "O";
-      box.style.color = "blue";
       turnO = false;
+      box.classList.add("glow-o");
       box.disabled = true;
       winner();
+    }else {
+      box.innerText = "X";
+      turnO = true;
+      box.classList.add("glow-x");
     }
-    if (winnerText.innerHTML === "") {
-      randomMove();
-      if (winnerText.innerText === "") {
-        winner();
-      }
-    }
+    box.disabled = true;
+    winner();
+
   });
 });
 
@@ -290,27 +290,10 @@ resetBtn.addEventListener("click", () => {
   boxes.forEach((box) => {
     box.innerText = "";
     box.disabled = false;
+    ok.play();
+    box.classList.remove("glow-o", "glow-x", "shake"); 
   });
   turnO = true;
   winnerText.innerHTML = "";
-  ok.play();
 });
 
-function randomMove() {
-  if (!turnO) {
-    let emptyBoxes = boxes.some((box) => box.innerText === "");
-
-    if (!emptyBoxes) return;
-
-    while (true) {
-      let random = Math.floor(Math.random() * boxes.length);
-      if (boxes[random].innerText === "") {
-        boxes[random].innerText = "X";
-        boxes[random].style.color = "red";
-        boxes[random].disabled = true;
-        turnO = true;
-        break;
-      }
-    }
-  }
-}
