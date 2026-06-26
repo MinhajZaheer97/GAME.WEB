@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("./images/Glowing\ Stars.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.welcome{
+    padding-top: 5%;
+    padding-bottom: 4%;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 241, 241);
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: xxx-large;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    
+}
+
+.card{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    backdrop-filter: blur(40px);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 15%;
+}
+
+.cards img{
+    width: 200px;
+    height: 200px;
+}
+
+.card:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.play{
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.play:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
