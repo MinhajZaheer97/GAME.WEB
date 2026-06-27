@@ -39,8 +39,8 @@ body{
 }
 
 .btn {
-    min-width: none;
-    margin: 20px auto;
+    /* min-width: none; */
+    /* margin: 20px auto; */
     padding: 12px 25px;
     background: #111; 
     color: #fff;
@@ -109,11 +109,10 @@ body{
 
 .imoji {
     position: absolute;
-    font-size: 50px;
+    font-size: 75px;
     opacity: 0;
     animation: showEmoji 3s infinite;
     text-shadow: 0px 0px 10px #ffffff;
-    font-size: 100%;
 }
 
 .paper{
@@ -136,4 +135,22 @@ body{
     70%, 100% {
         opacity: 0;
     }
+}
+
+
+
+.moves{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.options-container{
+    display: none;
+}
+
+.option{
+    width: 100%;
 }
