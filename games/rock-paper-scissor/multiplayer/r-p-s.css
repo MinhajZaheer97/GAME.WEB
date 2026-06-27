@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: url("../../../assets/images/ttt-bk.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.game{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #585858;
+    text-decoration: underline;
+    padding-top: 10vh;
+    color: #ccc;
+}
+
+.image-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    min-width: 100%;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    min-width: 100%;
+}
+
+.btn {
+    min-width: none;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: #111; 
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #9d00ff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    
+  
+    box-shadow: 0 0 10px rgba(157, 0, 255, 0.5), 
+                inset 0 0 5px rgba(157, 0, 255, 0.3);
+                
+
+    animation: buttonGlowPulse 2s infinite alternate;
+}
+
+
+.btn:hover{
+    border: 2px solid #9d00ff;
+    background: #9d00ff;
+    color: #fff;
+    box-shadow: 0 0 15px #9d00ff, 
+                0 0 30px #9d00ff, 
+                0 0 50px #9d00ff;
+    text-shadow: 0 0 5px #fff;
+}
+
+
+.btn:active{
+    border: 2px solid #9d00ff;
+    background: #9d00ff;
+    color: #fff;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px #9d00ff;
+}
+
+.fightbtn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    min-width: 100%;
+}
+
+.newBtn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    min-width: 100%;
+}
+
+
+/* imoji looping */
+
+.players{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden
+}
+
+.imoji {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    animation: showEmoji 3s infinite;
+    text-shadow: 0px 0px 10px #ffffff;
+    font-size: 100%;
+}
+
+.paper{
+    animation-delay: 1s;
+}
+
+.scissor{
+    animation-delay: 2s;
+}
+
+@keyframes showEmoji {
+    0%, 20% {
+        opacity: 0;
+    }
+
+    30%, 60% {
+        opacity: 1;
+    }
+
+    70%, 100% {
+        opacity: 0;
+    }
+}

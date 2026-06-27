@@ -181,7 +181,7 @@ body{
                 animation: flicker-o 2s infinite alternate;
         }
 
-
+/* 
 @keyframes flicker {
             0%, 18%, 22%, 25%, 53%, 57%, 100% {
                 text-shadow:
@@ -208,4 +208,4 @@ body{
             32%, 35%, 72% {        
                 text-shadow: none; 
             }
-        }
+        } */
