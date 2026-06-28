@@ -9,14 +9,20 @@
 </head>
 <body>
     <h1 class="game">Rock Paper Scissors</h1>
-    <h2 class="winner"></h2>
-
+    <div class = "forBlur">
+        <h2 class = "game score">score</h2>
+        <div class="score-container ">
+        <h3 class="player-1 game">player 1 = <span class ="score1"></span></h3>
+        <h3 class="player-2 game">player 2 = <span class = "score2"></span></h3>
+    </div>
+    
     <div class="image-container">
         <div class="players player1">
             <span class="imoji rock">✊</span>
             <span class="imoji paper">✋</span>
             <span class="imoji scissor">✌️</span>
         </div>
+
         <div class="players player2">
             <span class="imoji rock">✊</span>
             <span class="imoji paper">✋</span>
@@ -29,7 +35,7 @@
             <div class="options-container options-container1">
                 <button class="btn option optionPlayer1">Rock ✊</button>
                 <button class="btn option optionPlayer1">Paper ✋</button>
-                <button class="btn option optionPlayer1">scissor ✌️</button>
+                <button class="btn option optionPlayer1">Scissor ✌️</button>
             </div>
         </div>
         <div class="player2 moves">
@@ -37,15 +43,21 @@
             <div class="options-container options-container2">
                 <button class="btn option optionPlayer2">Rock ✊</button>
                 <button class="btn option optionPlayer2">Paper ✋</button>
-                <button class="btn option optionPlayer2">scissor ✌️</button>
+                <button class="btn option optionPlayer2">Scissor ✌️</button>
             </div>
         </div>
     </div>
     <div class="fightbtn-container">
         <button class = "fight btn"> FIGHT</button>
     </div>
-    <div class="newBtn-container">
-        <button class="newGame btn">NEW GAME</button>
-    </div>
+</div>
+<div class="overlay"></div>
+        <span class="winner">
+            <h2 class="winner-text"></h2>
+            <div class="newBtn-container">
+                <button class="newGame btn">NEW GAME</button>
+            </div>
+        </span>
+
 </body>
 </html>
