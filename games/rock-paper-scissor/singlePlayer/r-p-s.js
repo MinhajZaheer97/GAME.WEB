@@ -1,5 +1,5 @@
-const player1 = document.querySelector(".player1Turn");
-const player2 = document.querySelector(".player2Turn");
+let player1 = document.querySelector(".player1Turn");
+let player2 = document.querySelector(".player2Turn");
 const optionsContainer1 = document.querySelector(".options-container1");
 const optionsContainer2 = document.querySelector(".options-container2");
 const optionPlayer1 = document.querySelectorAll(".optionPlayer1");
@@ -14,6 +14,8 @@ let player1ScoreText = document.querySelector(".score1");
 let player2ScoreText = document.querySelector(".score2");
 const scoreContainer = document.querySelector(".score-container");
 
+player2.disabled = true;
+
 let player1Move;
 let player2Move;
 
@@ -23,14 +25,24 @@ let player2Score = 0;
 player1ScoreText.innerText = 0;
 player2ScoreText.innerText = 0;
 
+function aimove(){
+  let random = (Math.random()*2).toFixed(0);
+
+  if (random == 0) {
+    player2Move = "AI selected Rock ✊";
+    player2.innerText = "Rock ✊";
+  } else if (random == 1) {
+    player2Move = "Paper ✋";
+    player2.innerText = "AI selected Paper ✋";
+  } else if (random == 2) {
+    player2Move = "Scissor ✌️";
+    player2.innerText = "AI selected Scissor ✌️";
+  }
+}
+
 player1.addEventListener("click", () => {
   optionsContainer1.style.display = "block";
   player1.innerText = "Choose your move";
-});
-
-player2.addEventListener("click", () => {
-  optionsContainer2.style.display = "block";
-  player2.innerText = "Choose your move";
 });
 
 optionPlayer1.forEach((option) => {
@@ -39,15 +51,7 @@ optionPlayer1.forEach((option) => {
     optionsContainer1.style.display = "none";
     player1Move = option.innerText;
     player1.disabled = true;
-  });
-});
-
-optionPlayer2.forEach((option) => {
-  option.addEventListener("click", () => {
-    player2.innerText = "you have selected the move";
-    optionsContainer2.style.display = "none";
-    player2Move = option.innerText;
-    player2.disabled = true;
+    player1.innerText = option.innerText
   });
 });
 
@@ -78,15 +82,18 @@ newGame.addEventListener("click", () => {
   winnerContainer.style.display = "none";
   player1Move = "";
   player2Move = "";
-  player1.innerText = "PLAYER 1 TURN";
-  player2.innerText = "PLAYER 2 TURN";
+  player1.innerText = "Choose your move";
+  player2.innerText = "AI move";
   player1.disabled = false;
   player2.disabled = false;
 });
 
 fightBtn.addEventListener("click", () => {
-    if (player1Move && player2Move) {
-      winner();
+    if (player1Move) {
+      aimove();
+      setTimeout(() => {
+        winner();
+      }, 1000);
     }else{
         alert("Please select your moves first")
     }
@@ -97,5 +104,3 @@ scoreContainer.classList.add("hide");
     score.addEventListener("click", () => {
         scoreContainer.classList.toggle("hide");
     });
-
-

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | GAME.WEB</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#000;
+            color:#00ff66;
+            font-family:Consolas,"Courier New",monospace;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
+
+        .terminal{
+            width:100%;
+            max-width:900px;
+            border:2px solid #00ff66;
+            box-shadow:0 0 20px rgba(0,255,102,.35);
+            overflow:hidden;
+        }
+
+        .title-bar{
+            background:#00ff66;
+            color:#000;
+            padding:12px 18px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            font-weight:bold;
+        }
+
+        .buttons{
+            display:flex;
+            gap:8px;
+        }
+
+        .buttons span{
+            width:12px;
+            height:12px;
+            background:#000;
+            border-radius:50%;
+        }
+
+        .content{
+            padding:30px;
+            line-height:1.8;
+            font-size:17px;
+        }
+
+        .command{
+            color:#7dff9c;
+            margin-bottom:18px;
+        }
+
+        h2{
+            margin-bottom:20px;
+            font-size:28px;
+        }
+
+        p{
+            margin-bottom:18px;
+        }
+
+        .section{
+            margin-top:30px;
+        }
+
+        .label{
+            color:#8dffae;
+        }
+
+        .cursor{
+            display:inline-block;
+            width:10px;
+            height:20px;
+            background:#00ff66;
+            vertical-align:middle;
+            margin-left:6px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="terminal">
+
+    <div class="title-bar">
+        <span>C:\GAME.WEB\ABOUT.EXE</span>
+
+        <div class="buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <p>Microsoft Windows [Version 10.0.26100]</p>
+        <p>(c) Microsoft Corporation. All rights reserved.</p>
+
+        <br>
+
+        <p class="command">C:\GAME.WEB> about</p>
+
+        <h2>GAME.WEB</h2>
+
+        <p>
+            GAME.WEB is a browser-based gaming platform built to provide simple,
+            enjoyable, and accessible games for everyone. The project focuses on
+            creating a smooth experience where players can start playing instantly
+            without unnecessary complexity.
+        </p>
+
+        <p>
+            Whether you want to challenge a friend sitting beside you or compete
+            against an AI opponent, GAME.WEB offers games designed for quick
+            entertainment and easy gameplay.
+        </p>
+
+        <div class="section">
+
+            <p><span class="label">Purpose:</span> Deliver fun and lightweight browser games.</p>
+
+            <p><span class="label">Game Modes:</span> Player vs Player and Player vs AI.</p>
+
+            <p><span class="label">Technology:</span> HTML, CSS and JavaScript.</p>
+
+            <p><span class="label">Experience:</span> Fast, responsive and easy to use.</p>
+
+            <p><span class="label">Developer:</span> Minhaj</p>
+
+            <p><span class="label">Status:</span> Online</p>
+
+        </div>
+
+        <br>
+
+        <p>
+            GAME.WEB continues to grow with the goal of introducing more games,
+            improving gameplay quality, and delivering a better experience with
+            every update.
+        </p>
+
+        <br>
+
+        <p class="command">C:\GAME.WEB><span class="cursor"></span></p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
