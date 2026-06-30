@@ -13,6 +13,7 @@ const score = document.querySelector(".score");
 let player1ScoreText = document.querySelector(".score1");
 let player2ScoreText = document.querySelector(".score2");
 const scoreContainer = document.querySelector(".score-container");
+const playermoves = document.querySelector(".players-move-info");
 
 const winsound = new Audio("../../../assets/sounds/rps/winning.wav");
 const losesound = new Audio("../../../assets/sounds/rps/loose.mp3");
@@ -71,6 +72,7 @@ optionPlayer1.forEach((option) => {
 
 function winner() {
   if (player1Move === player2Move) {
+    playermoves.innerText = `${player1Move} vs ${player2Move}`;
     winnerText.innerText = "TIE";
     drawsound.play();
   } else if (
@@ -78,11 +80,13 @@ function winner() {
     (player1Move === "Paper ✋" && player2Move === "Rock ✊") ||
     (player1Move === "Scissor ✌️" && player2Move === "Paper ✋")
   ) {
+    playermoves.innerText = `${player1Move} vs ${player2Move}`;
     winnerText.innerText = "PLAYER 1 WINS";
     winsound.play();
      player1Score++
     player1ScoreText.innerText = player1Score
   } else {
+    playermoves.innerText = `${player1Move} vs ${player2Move}`;
     losesound.play();
     winnerText.innerText = "AI WINS";
     player2Score++
