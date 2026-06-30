@@ -6,6 +6,11 @@ const drawSound = new Audio("../../../assets/sounds/tic-tac-toe/draw.wav");
 const clickSound = new Audio("../../../assets/sounds/tic-tac-toe/click.wav");
 const winSound = new Audio("../../../assets/sounds/tic-tac-toe/winner.wav");
 const ok = new Audio("../../../assets/sounds/tic-tac-toe/ok.mp3");
+const Music = new Audio("/assets/sounds/tic-tac-toe/ttt-main.mp3");
+
+Music.loop = true;
+Music.volume = 1;
+Music.play();
 
 let turnO = true;
 boxes.forEach((box) => {

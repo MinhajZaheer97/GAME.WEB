@@ -220,8 +220,6 @@ body{
     }
 }
 
-
-
 .moves{
     display: flex;
     flex-direction: column;
@@ -249,4 +247,8 @@ body{
     background: rgba(0,0,0,0.35);
     display: none;
     z-index: 999;
+}
+
+.{
+    text-align: center;
 }

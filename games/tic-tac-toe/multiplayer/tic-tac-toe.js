@@ -7,6 +7,11 @@ const drawSound = new Audio("../../../assets/sounds/tic-tac-toe/draw.wav");
 const clickSound = new Audio("../../../assets/sounds/tic-tac-toe/click.wav");
 const winSound = new Audio("../../../assets/sounds/tic-tac-toe/winner.wav");
 const ok = new Audio("../../../assets/sounds/tic-tac-toe/ok.mp3");
+const backgroundMusic = new Audio("/assets/sounds/tic-tac-toe/ttt-main.mp3");
+
+backgroundMusic.loop = true;
+backgroundMusic.volume = 1;
+backgroundMusic.play();
 
 winnerText.innerHTML = "PLAYER O TURN";
 let turnO = true;

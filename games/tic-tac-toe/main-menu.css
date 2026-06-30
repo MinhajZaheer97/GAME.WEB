@@ -88,3 +88,8 @@ body{
                     inset 0 0 10px rgba(157, 0, 255, 0.5);
     }
 }
+
+.container span{
+    font-size: 20px;
+    cursor: pointer;
+}
