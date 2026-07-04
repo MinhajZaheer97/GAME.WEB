@@ -16,3 +16,5 @@ aboutBtn.addEventListener("click", () => {
         window.location.href = "/info/aboutweb.html";
     },80)
 });
+
+//fefw
