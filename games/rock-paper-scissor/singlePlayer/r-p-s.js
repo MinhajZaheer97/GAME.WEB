@@ -65,7 +65,7 @@ optionPlayer1.forEach((option) => {
     optionsContainer1.style.display = "none";
     player1Move = option.innerText;
     player1.disabled = true;
-    player1.innerText = option.innerText
+    player1.innerText = option.innerText;
     btnClick.play();
   });
 });
@@ -83,19 +83,18 @@ function winner() {
     playermoves.innerText = `${player1Move} vs ${player2Move}`;
     winnerText.innerText = "PLAYER 1 WINS";
     winsound.play();
-     player1Score++
-    player1ScoreText.innerText = player1Score
+    player1Score++;
+    player1ScoreText.innerText = player1Score;
   } else {
     playermoves.innerText = `${player1Move} vs ${player2Move}`;
     losesound.play();
     winnerText.innerText = "AI WINS";
-    player2Score++
-    player2ScoreText.innerText = player2Score
+    player2Score++;
+    player2ScoreText.innerText = player2Score;
   }
 
   overlay.style.display = "block";
   winnerContainer.style.display = "block";
-
 }
 
 newGame.addEventListener("click", () => {
@@ -111,22 +110,19 @@ newGame.addEventListener("click", () => {
 });
 
 fightBtn.addEventListener("click", () => {
-    if (player1Move) {
-      aimove();
-      fightSound.play();
-      setTimeout(() => {
-        winner();
-      }, 1000);
-    }else{
-        alert("Please select your moves first")
-    }
+  if (player1Move) {
+    aimove();
+    fightSound.play();
+    setTimeout(() => {
+      winner();
+    }, 1000);
+  } else {
+    alert("Please select your moves first");
+  }
 });
 
 scoreContainer.classList.add("hide");
 
-    score.addEventListener("click", () => {
-        scoreContainer.classList.toggle("hide");
-    });
-
-
-    //              fianrfnoan
+score.addEventListener("click", () => {
+  scoreContainer.classList.toggle("hide");
+});

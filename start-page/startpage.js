@@ -17,4 +17,3 @@ aboutBtn.addEventListener("click", () => {
     },80)
 });
 
-//fefw
