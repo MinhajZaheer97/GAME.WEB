@@ -127,3 +127,6 @@ scoreContainer.classList.add("hide");
     score.addEventListener("click", () => {
         scoreContainer.classList.toggle("hide");
     });
+
+
+    //               fianrfnoan
