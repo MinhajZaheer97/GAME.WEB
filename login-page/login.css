@@ -1,4 +1,23 @@
-*{
+/* *{
     padding: 0px;
     margin: 0px;
+}
+ */
+
+
+ .conditions ul {
+    list-style-type: disc ; 
+    padding-left: 20px ;    
+    margin-top: 5px;
+}
+
+.conditions li {
+    display: list-item ;    
+}
+
+.pass-con{
+    display: none;
+}
+.name-con{
+    display: none;
 }
