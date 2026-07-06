@@ -1,9 +1,41 @@
-/* *{
+*{
     padding: 0px;
     margin: 0px;
 }
- */
 
+h1{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 241, 241);
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: xxx-large;
+}
+
+.login-container{            
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+h3{
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: x-large;
+    margin-bottom: 5px;
+    color: white;
+}
+ .conditions{
+    padding-left: 20px;
+    margin-top: 5px;
+}
 
  .conditions ul {
     list-style-type: disc ; 
@@ -20,4 +52,76 @@
 }
 .name-con{
     display: none;
+}
+
+.btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+}
+
+.input:hover {
+    box-shadow: 0 0 15px rgba(157, 0, 255, 0.7),
+                inset 0 0 8px rgba(157, 0, 255, 0.4);
+}
+
+.input:focus {
+    border-color: #9d00ff;
+    box-shadow: 0 0 15px #9d00ff,
+                0 0 30px rgba(157, 0, 255, 0.7),
+                inset 0 0 8px rgba(157, 0, 255, 0.4);
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.password-wrapper{
+    width: 100%;
+    position: relative;
+}
+
+.input{
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid #9d00ff;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+
+    box-shadow: 0 0 10px rgba(157, 0, 255, 0.5),
+                inset 0 0 5px rgba(157, 0, 255, 0.3);
+}
+
+.show-pass{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.show-pass img{
+    width: 20px;
+    height: 20px;
+    display: block;
 }

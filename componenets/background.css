@@ -1,0 +1,12 @@
+body{
+    min-height: 100vh;
+    height: 100vh;
+    background-image: url("../assets/images/Glowing\ Stars.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}

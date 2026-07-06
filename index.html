@@ -1,46 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GAME.WEB</title>
-    <link rel="stylesheet" href="/login-page/login.css">
+    <link rel="stylesheet" href="/componenets/background.css" />
+    <link rel="stylesheet" href="/componenets/btn.css" />
+    <link rel="stylesheet" href="/login-page/login.css" />
+    <link rel="stylesheet" href="/componenets/heading.css" />
     <script src="/login-page/login.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1 class="welcome glow-pulse">WELCOME TO GAME.WEB</h1>
 
-    <h3>Sign up or login</h3>
+    <div class="login-container">
+      <h3 class="welcome glow-pulse">REGISTER TO GAME.WEB</h3>
 
-    <div>
-        <p>user-name</p>
-        <input type="text" placeholder="enter user-name" class="field name">
-        <div class="name-con conditions">
-            <p>
-                user name should contain: 
-            </p>
-                <ul>
-                    <li class="N1">Minimum 8 digits</li>
-                    <li class="N2">No special character</li>
-                </ul>
-        </div>
-        <p>password</p>
-        <input type="password" placeholder="enter password" class="field pass"><br>
-        <div class="pass-con conditions">
-            <p>
-                password should contain: 
-            </p>
-                <ul>
-                    <li class="P1">minimum 8 digits</li>
-                    <li class="P2">atleast one special character</li>
-                    <li class="P3">should contain alphabets</li>
-                </ul>
-        </div>
+      <p class="glow-pulse">user-name</p>
+      <input type="text" placeholder="enter user-name" class="input name" />
+      <div class="name-con conditions">
+        <p class="glow-pulse">user name should contain:</p>
+        <ul>
+          <li class="N1">Minimum 8 digits</li>
+          <li class="N2">No special character</li>
+        </ul>
+      </div>
+      <p class="glow-pulse">password</p>
+      <div class="password-wrapper">
+        <input
+          type="password"
+          placeholder="enter password"
+          class="input pass"
+        />
+
+        <span class="show-pass">
+          <img src="/assets/images/view.png" alt="show password" />
+        </span>
+      </div>
+      <div class="pass-con conditions">
+        <p class="glow-pulse">password should contain:</p>
+        <ul>
+          <li class="P1">minimum 8 digits</li>
+          <li class="P2">atleast one special character</li>
+        </ul>
+      </div>
+      <div class="btn-container">
         <button class="btn sign-up">sign up</button>
-        <!-- <button class="btn login">login</button> -->
+      </div>
+      <!-- <button class="btn login">login</button> -->
     </div>
-</body>
-
+  </body>
 </html>
