@@ -27,7 +27,6 @@ const specialChar = [
   "?",
   "+",
   "=",
-  "-",
   "[",
   "]",
   "{",
@@ -96,16 +95,32 @@ signupBtn.addEventListener("click", () => {
         userName,
         userPass,
       };
+
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
       window.location.href = "/start-page/startpage.html";
+      document.body.innerHTML = "";
+      setTimeout(() => {
+        location.replace("./start-page/startpage.html");
+      }, 100);
     }
   } else {
     alert("please enter password and user name");
   }
 });
 
-
 showHidePass.addEventListener("click", () => {
   userPassInput.type = userPassInput.type === "password" ? "text" : "password";
-  img.src = img.src.includes("view.png") ? "/assets/images/hidden.png" : "/assets/images/view.png";
+  img.src = img.src.includes("view.png")
+    ? "/assets/images/hidden.png"
+    : "/assets/images/view.png";
 });
+
+// localStorage.clear()
+const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+if (userInfo) {
+  document.body.innerHTML = "";
+  setTimeout(() => {
+    location.replace("./start-page/startpage.html");
+  }, 0);
+}

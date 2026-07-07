@@ -1,7 +1,17 @@
+// const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+
+// let e = true;
+// if(userInfo){
+//     if(e){
+//     window.location.href = "/start-page/startpage.html";
+//     e = false;
+//     }
+// }
+// localStorage.clear()
+
 const aboutBtn = document.querySelector(".about");
 const startBtn = document.querySelector(".start");
 const btnClick = new Audio("../assets/sounds/btns/btnClick.mp3");
-
 
 startBtn.addEventListener("click", () => {
     btnClick.play();
@@ -16,4 +26,3 @@ aboutBtn.addEventListener("click", () => {
         window.location.href = "/info/aboutweb.html";
     },80)
 });
-
