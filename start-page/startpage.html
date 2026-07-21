@@ -10,14 +10,14 @@
   </head>
   <body>
     <nav class="navbar">
-      <span class="profile-con">
+      <span class="profile-con" id="profileToggle" role="button" tabindex="0" aria-label="Open profile info">
         <img
           src="../assets/images/def-profile.png"
           alt="view profile"
           class="logo"
         />
       </span>
-      <span class="setting-con">
+      <!-- <span class="setting-con">
         <span class="pro">
             settings
         </span>
@@ -25,8 +25,27 @@
           src="../assets/images/gear-icon.png"
           alt="settings"
           class="setting"
-      /></span>
+      /></span> -->
     </nav>
+
+    <div class="profile-info">
+      <button class="close-profile" aria-label="Close profile">×</button>
+      <span>
+          <p class="username">user-name</p><button class="change-user">change username</button>
+      </span>
+      <span>
+          <p class="password">password</p><button class="change-pass">change password</button>
+      </span>
+      <span>
+        <p class = "avatar">select avatar</p>
+            <div class="avatar-con">
+                <img src="../assets/images/def-profile.png" alt="avatar" class="avatar-img">
+                <img src="../assets/images/def-profile.png" alt="avatar" class="avatar-img">
+                <img src="../assets/images/def-profile.png" alt="avatar" class="avatar-img">
+                <img src="../assets/images/def-profile.png" alt="avatar" class="avatar-img">
+            </div>
+      </span>
+    </div>
     <h1 class="welcome glow-pulse">WELCOME TO GAME.WEB</h1>
     <button class="start btn">PLAY</button>
     <button class="start btn about">ABOUT</button>
