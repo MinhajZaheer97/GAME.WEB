@@ -16,19 +16,8 @@ body {
     align-items: center;
 }
 
-.welcome {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    text-align: center;
-    font-size: 30px;
-    color: rgb(255, 241, 241);
-    font-weight: bolder;
-    text-decoration: underline;
-    font-size: xxx-large;
-}
 
 .btn {
-    width: 200px;
     padding: 12px 25px;
     background: #111;
     color: #fff;
@@ -41,14 +30,14 @@ body {
     position: relative;
     transition: all 0.3s ease-in-out;
 
-
-
+    
+    
     box-shadow: 0 0 10px rgba(157, 0, 255, 0.5),
         inset 0 0 5px rgba(157, 0, 255, 0.3);
 
 
-    animation: buttonGlowPulse 2s infinite alternate;
-}
+        animation: buttonGlowPulse 2s infinite alternate;
+    }
 
 
 .btn:hover {
@@ -70,8 +59,24 @@ body {
     box-shadow: 0 0 10px #9d00ff;
 }
 
+.welcome {
+    /* width: 100px; */
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 241, 241);
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: xxx-large;
+}
 .about {
     margin: 20px;
+    width: 200px;
+}
+
+.start{
+    /* margin: 20px; */
     width: 200px;
 }
 
@@ -204,6 +209,26 @@ body {
     box-shadow: 0 0 14px rgba(157, 0, 255, 0.8);
 }
 
+.avatar-con img.selected-avatar {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 2px #9d00ff, 0 0 14px rgba(157, 0, 255, 0.9);
+    transform: scale(1.05);
+}
+
+.username-input {
+    width: 140px;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid rgba(157, 0, 255, 0.6);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.username-input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
 @media (max-width: 768px) {
     .profile-info {
         top: 0;
@@ -251,3 +276,4 @@ body {
         color: #fff;
     }
 }
+
