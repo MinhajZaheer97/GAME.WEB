@@ -1,6 +1,6 @@
-if(!localStorage.getItem("userInfo")) {
-    window.location.href = "../index.html";   
-}
+// if(!localStorage.getItem("userInfo")) {
+//     window.location.href = "../index.html";   
+// }
 
 const aboutBtn = document.querySelector(".about");
 const startBtn = document.querySelector(".start");
