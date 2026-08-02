@@ -2,6 +2,8 @@
 //     window.location.href = "../index.html";   
 // }
 
+import { supabase } from "../backend.js";
+
 const aboutBtn = document.querySelector(".about");
 const startBtn = document.querySelector(".start");
 const profileToggle = document.querySelector("#profileToggle");
@@ -16,6 +18,7 @@ const changeUserBtn = document.querySelector(".change-user");
 const changePassBtn = document.querySelector(".change-pass");
 const AVATAR_STORAGE_KEY = "selectedAvatar";
 const AVATAR_ALT_STORAGE_KEY = "selectedAvatarAlt";
+
 
 function applySelectedAvatar(avatar, shouldPersist = true) {
     if (!profileAvatar) return;
@@ -207,3 +210,128 @@ logoutBtn.addEventListener("click", () => {
         window.location.replace("../index.html")
     }, 80);
 });
+
+async function findusername(){
+    const {data : {session} , error : sessionError} = await supabase.auth.getSession()
+    if(sessionError || !session){
+        console.log(sessionError);
+        window.location.href = "/index.html";  
+        return
+    }
+
+   const { data, error } = await supabase
+        .from("users")
+        .select("*")
+        .eq("id", session.user.id)
+        .single();
+
+    if(error){
+        console.log(error)
+    }else{
+        usernameText.innerHTML = data.userName;
+        
+    }
+
+
+    
+    // const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+
+    // if (sessionError || !session) {
+    //     console.error("No active session:", sessionError);
+    //     window.location.href = "/index.html";
+    //     return;
+    // }
+
+    // const { data, error } = await supabase
+    //     .from("users")
+    //     .select("*")
+    //     .eq("id", session.user.id)
+    //     .single();
+
+    // if (error) {
+    //     console.error("Error fetching user:", error);
+    // } else {
+    //     console.log(data);
+    //     if (usernameText && data) {
+    //         usernameText.textContent = data.userName || "user-name";
+    //     }
+    // }
+}
+
+findusername();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+
+    // if (sessionError || !session) {
+    //     console.error("No active session:", sessionError);
+    //     window.location.href = "/index.html";
+    //     return;
+    // }
+
+    // const { data, error } = await supabase
+    //     .from("users")
+    //     .select("*")
+    //     .eq("id", session.user.id)
+    //     .single();
+
+    // if (error) {
+    //     console.error("Error fetching user:", error);
+    // } else {
+    //     console.log(data);
+    //     if (usernameText && data) {
+    //         usernameText.textContent = data.userName || "user-name";
+    //     }
+    // }

@@ -42,7 +42,7 @@ h1{
     font-size: xxx-large;
 }
 
-.login-container{
+.login-container{            
     backdrop-filter: blur(15px);
     border-radius: 10px;
     padding: 20px;
@@ -66,13 +66,13 @@ p{
 }
 
  .conditions ul {
-    list-style-type: disc ;
-    padding-left: 20px ;
+    list-style-type: disc ; 
+    padding-left: 20px ;    
     margin-top: 5px;
 }
 
 .conditions li {
-    display: list-item ;
+    display: list-item ;    
 }
 
 .pass-con{
@@ -88,7 +88,7 @@ p{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} 
 
 
 
@@ -112,6 +112,8 @@ p{
 .btn-container{
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -129,6 +131,23 @@ p{
         padding: 10px 18px;
         font-size: 15px;
     }
+}
+
+.switch-page{
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.switch-page a{
+    color: purple;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.switch-page a:hover{
+    color: #fff;
 }
 
 
