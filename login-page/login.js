@@ -1,8 +1,9 @@
+import { supabase } from "../backend";
+
 const showHidePass = document.querySelector(".show-pass");
 const userPassInput = document.querySelector(".pass");
 const img = showHidePass ? showHidePass.querySelector("img") : null;
 const signinBtn = document.querySelector(".sign-in");
-const userName = document.querySelector(".name");
 const useremail = document.querySelector(".email");
 
 if (showHidePass && userPassInput && img) {
@@ -45,15 +46,35 @@ const specialChar = [
 ];
 
 signinBtn.addEventListener("click", async () => {
-  const userNameValue = userName.value.replaceAll(" ", "");
   const userEmailValue = useremail.value.replaceAll(" ", "");
+  const userPassValue = userPassInput.value.replaceAll(" ", "");
+  
+  if (userPassValue && userEmailValue) {
 
-  if (userNameValue && userEmailValue) {
-    const userInfo = {
-      userName: userNameValue,
-      userEmail: userEmailValue,
-    };
+    const { data: signin, error: signinError } = await supabase.auth.signInWithPassword({
+      email: userEmailValue,
+      password: userPassValue,
+    });
+
+    if(signinError){
+      alert('check your email or password');
+      return
+    }
+
+    window.location.replace('../start-page/startpage.html')
+    
+
   } else {
     alert("please enter email and user name");
   }
 });
+
+
+const {
+  data: { session },
+} = await supabase.auth.getSession();
+
+if (session) {
+  window.location.href = "/start-page/startpage.html";
+}
+

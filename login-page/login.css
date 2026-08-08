@@ -169,3 +169,21 @@ p{
     height: 20px;
     display: block;
 }
+
+
+.switch-page{
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.switch-page a{
+    color: purple;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.switch-page a:hover{
+    color: #fff;
+}

@@ -95,6 +95,21 @@ signupBtn.addEventListener("click", async () => {
       conditions.condition3 &&
       conditions.condition4
     ) {
+      const { data: userAvailable, error: userAvailableError } = await supabase
+        .from("users")
+        .select("userName")
+        .eq("userName", userName);
+      if (userAvailableError) {
+        alert(userAvailableError.message);
+        console.log("User Available Error:", userAvailableError);
+        return;
+      }
+      if (userAvailable && userAvailable.length > 0) {
+        alert("Username already taken");
+        return;
+      }
+
+
       const { data, error } = await supabase.auth.signUp({
         email: useremail,
         password: userPass,
@@ -113,10 +128,9 @@ signupBtn.addEventListener("click", async () => {
       if (profileError) {
         alert(profileError.message);
         return;
-      }else{
+      } else {
         window.location.href = "/start-page/startpage.html";
       }
-
     }
   } else {
     alert("please enter email, password and user name");

@@ -1,7 +1,3 @@
-// if(!localStorage.getItem("userInfo")) {
-//     window.location.href = "../index.html";   
-// }
-
 import { supabase } from "../backend.js";
 
 const aboutBtn = document.querySelector(".about");
@@ -218,7 +214,6 @@ async function findusername(){
         window.location.href = "/index.html";  
         return
     }
-
    const { data, error } = await supabase
         .from("users")
         .select("*")
@@ -229,37 +224,18 @@ async function findusername(){
         console.log(error)
     }else{
         usernameText.innerHTML = data.userName;
-        
     }
-
-
-    
-    // const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-
-    // if (sessionError || !session) {
-    //     console.error("No active session:", sessionError);
-    //     window.location.href = "/index.html";
-    //     return;
-    // }
-
-    // const { data, error } = await supabase
-    //     .from("users")
-    //     .select("*")
-    //     .eq("id", session.user.id)
-    //     .single();
-
-    // if (error) {
-    //     console.error("Error fetching user:", error);
-    // } else {
-    //     console.log(data);
-    //     if (usernameText && data) {
-    //         usernameText.textContent = data.userName || "user-name";
-    //     }
-    // }
 }
 
 findusername();
 
+const {
+  data: { session },
+} = await supabase.auth.getSession();
+
+if (session) {
+  window.location.href = "/start-page/startpage.html";
+}
 
 
 
