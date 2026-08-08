@@ -229,13 +229,6 @@ async function findusername(){
 
 findusername();
 
-const {
-  data: { session },
-} = await supabase.auth.getSession();
-
-if (session) {
-  window.location.href = "/start-page/startpage.html";
-}
 
 
 
