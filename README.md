@@ -143,9 +143,9 @@ These are possible next steps, not current features:
 
 ## Live Demo
 
-[ADD LIVE DEMO LINK]
+https://gameweb-by-minhaj.netlify.app/
 
 ## Author
 
 Minhaj Zaheer  
-GitHub: [ADD GITHUB PROFILE LINK]
+GitHub: https://github.com/MinhajZaheer97
